@@ -101,7 +101,7 @@ exports.addPerson=async(req,res,next)=>{
          req.body       
         ])
     
-        person.save()
+        await person.save()
         console.log(req.body)
         next()
       
