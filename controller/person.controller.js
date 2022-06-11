@@ -93,15 +93,16 @@ exports.getUserById=async(req,res,next)=>{
 
 exports.addPerson=async(req,res,next)=>{
 
+    console.log(req.body)
+
 
     try {
 
-        person.create([
+        await person.create([
     
          req.body       
         ])
     
-        await person.save()
         console.log(req.body)
         next()
       
